@@ -6,8 +6,38 @@ gem 'rails', '4.1.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+# News grabber
+gem 'feedjira'
+
+# Social media
+gem 'twitter'
+gem 'instagram'
+gem 'tumblr_client'
+gem 'youtube_it'
+
+# Authentication
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-linkedin'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem 'figaro'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+
+# Heroku
+gem 'rails_12factor'
+
+# Testing
+group :test, :development do
+  gem 'pry'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
