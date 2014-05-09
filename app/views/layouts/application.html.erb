@@ -5,6 +5,8 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <nav class="navbar navbar-inverse" role="navigation">
@@ -35,14 +37,30 @@
           <li><%= link_to "High School", preps_path %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <!-- insert login/logout option here -->
+          <li class="dropdown">
+            <% if user_signed_in? %>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.name == nil ? current_user.email : current_user.name%><b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Favorites Dashboard", favorites_path %></li>
+                <li><%= link_to "Settings", edit_user_registration_path %></li>
+                <li class="divider"></li>
+                <li><%= link_to "Sign Out", destroy_user_session_path,:method => :delete %></li>
+              </ul>
+            <% else %>
+              <%= link_to "Sign In / Sign Up", new_user_session_path %>
+            <% end %>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+
   <div id="sub-bar"></div>
 
-<%= yield %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <%= yield %>
 
   <footer></footer>
 </body>
