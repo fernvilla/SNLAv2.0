@@ -37,6 +37,7 @@ group :test, :development do
   gem 'pry'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'capybara'
 end
 
 # Use Uglifier as compressor for JavaScript assets
@@ -74,4 +75,3 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
