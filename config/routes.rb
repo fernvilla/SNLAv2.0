@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :trojans
   resources :sparks
   resources :galaxies
-  resources :sparks
+  resources :chivas
   resources :preps
 
 end

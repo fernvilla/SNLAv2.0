@@ -11,5 +11,6 @@ namespace :sync do
     puts "There are now #{Laker.count} Lakers stories. #{newly_added} were just added."
   end
 
+  desc "Fetch all teams' stories"
   task :all => [:lakers]
 end
