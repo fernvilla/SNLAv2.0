@@ -15,6 +15,7 @@ class OfficialSiteImporter
           author:   entry.author,
           summary:  entry.summary,
           url:      entry.url,
+          published:  entry.published,
           # image:    entry.image,
           source:   source
         )

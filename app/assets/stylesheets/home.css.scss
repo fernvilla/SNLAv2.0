@@ -8,10 +8,21 @@ $shadow: 1px 1px 1px #000;
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
 @import url(http://fonts.googleapis.com/css?family=Signika);
 
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $base-color; /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+
 /* bootstrap defaults- include before @import */
 $border-radius-base: 0;
 $navbar-inverse-bg: $base-color;
-$navbar-height: 45px;
+$navbar-height: 40px;
 $navbar-inverse-link-color: #fff;
 $navbar-inverse-link-hover-color: $secondary-color;
 $font-size-base: 13px;
@@ -24,10 +35,7 @@ body {
 
 .navbar.navbar-inverse {
   margin: 0;
-  background: -moz-linear-gradient(top, #09235e 0%, $base-color 100%); 
-  background: -webkit-linear-gradient(top, #09235e 0%, $base-color 100%); 
-  background: -o-linear-gradient(top, #09235e 0%, $base-color 100%);  
-  background: -ms-linear-gradient(top, #09235e 0%, $base-color 100%); 
+  @include linear-gradient(#09235e, $base-color);
 }
 
 #sub-bar {
@@ -36,12 +44,20 @@ body {
 }
 
 #title {
-  font-size: 23px;
+  font-size: 22px;
   font-family: 'Signika', sans-serif;
   text-shadow: 1px 1px 1px #000;
   padding-left: 25px;
 }
 
+.jumbotron {
+  height: 100%;
+  background-color: #22376b;
+  color: #fff;
+  text-align: center;
+  text-shadow: 3px 3px 5px #000;
+  background-image: url('jumbo.jpg');
+}
 
 #social-container {
   max-width: 700px;
@@ -57,17 +73,13 @@ body {
   color: #fff;
   border-radius: 5px 5px 0 0;
   max-height: 70px;
-  background-image: -moz-linear-gradient(top,  #09235e 0%, $base-color 100%); /* FF3.6+ */  
-  background-image: -webkit-linear-gradient(top,  #09235e 0%, $base-color 100%); /* Chrome10+,Safari5.1+ */  
-  background-image: -o-linear-gradient(top,  #09235e 0%,$base-color 100%); /* Opera 11.10+ */  
-  background-image: -ms-linear-gradient(top,  #09235e 0%,$base-color 100%); /* IE10+ */ 
+  @include linear-gradient(#09235e, $base-color); 
 }
 
 #sign-in {
   padding: 25px 30px;
   text-align: center;
   color: $base-color;
-  border-right: 1px solid $secondary-color;
   a {
     color: $base-color;
   }
@@ -78,6 +90,7 @@ body {
   color: $base-color;
   text-align: center;
   font-size: 15px;
+  border-left: 1px solid $secondary-color;
 }
 
 .social-button {
@@ -88,10 +101,7 @@ body {
   text-align: left;
   padding: 5px;
   font-size: 13px;
-  background-image: -moz-linear-gradient(top,  #09235e 0%, $base-color 100%); /* FF3.6+ */  
-  background-image: -webkit-linear-gradient(top,  #09235e 0%, $base-color 100%); /* Chrome10+,Safari5.1+ */  
-  background-image: -o-linear-gradient(top,  #09235e 0%,$base-color 100%); /* Opera 11.10+ */  
-  background-image: -ms-linear-gradient(top,  #09235e 0%,$base-color 100%); /* IE10+ */ 
+  @include linear-gradient(#09235e, $base-color);
   width: 180px;
   box-shadow: $shadow;
   img {
@@ -115,19 +125,24 @@ body {
   background-color: $base-color;
   box-shadow: $shadow;
   color: #fff;
-  background-image: -moz-linear-gradient(top,  #09235e 0%, $base-color 100%); /* FF3.6+ */  
-  background-image: -webkit-linear-gradient(top,  #09235e 0%, $base-color 100%); /* Chrome10+,Safari5.1+ */  
-  background-image: -o-linear-gradient(top,  #09235e 0%,$base-color 100%); /* Opera 11.10+ */  
-  background-image: -ms-linear-gradient(top,  #09235e 0%,$base-color 100%); /* IE10+ */  
+  @include linear-gradient(#09235e, $base-color);
   &:hover {
     color: #e6e6e6;
   }
 }
 
-footer {
-  background-color: $secondary-color;
-  height: 60px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
+.team-header {
+  background-color: $base-color;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #fff;
+  padding: 5px;
+  margin-top: 15px;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  @include linear-gradient(#09235e, $base-color); 
+  a {
+    color: #fff;
+  }
 }
