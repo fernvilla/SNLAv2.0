@@ -31,11 +31,20 @@ $font-size-base: 13px;
 
 body {
   font-family: 'Roboto Condensed', sans-serif;
+  color: $base-color;
 }
 
 .navbar.navbar-inverse {
   margin: 0;
   @include linear-gradient(#09235e, $base-color);
+}
+
+.navbar .nav > li:hover {
+  background-color: #e6e6e6;
+  a {
+    color: $base-color;
+    text-shadow: none;
+  }
 }
 
 #sub-bar {
@@ -124,6 +133,7 @@ body {
   margin: 5px;
   background-color: $base-color;
   box-shadow: $shadow;
+  border-radius: 5px;
   color: #fff;
   @include linear-gradient(#09235e, $base-color);
   &:hover {
@@ -136,13 +146,61 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
   color: #fff;
   padding: 5px;
-  margin-top: 15px;
+  margin-top: 30px;
   font-size: 15px;
   text-align: center;
   border-radius: 5px;
-  margin-bottom: 10px;
+
   @include linear-gradient(#09235e, $base-color); 
   a {
     color: #fff;
   }
+}
+
+.team-sidebar {
+  text-align: center;
+  margin: 20px 0 0 20px;
+  padding: 0 10px 15px 10px;
+  height: 100%;
+  border: 1px solid $secondary-color;
+  border-radius: 5px;
+}
+
+.twitter {
+  padding: 0 15px;
+  margin: 20px 0 20px 20px;
+  text-align: center;
+  border: 1px solid $secondary-color;
+  border-radius: 5px;
+}
+
+.story {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 5px;
+  &:hover {
+    background-color:#efefef;
+    border-radius: 5px;
+  }
+}
+
+.source {
+  font-style: italic;
+  font-size: 12px;
+  color: #575757;
+}
+
+a {
+  color: #004080;
+  &:hover {
+    color: #306180;
+    text-decoration: none;
+  }
+  &:visited {
+    color: #818181;
+  }
+}
+
+.new {
+  color: red;
+  font-size: 12px;
 }

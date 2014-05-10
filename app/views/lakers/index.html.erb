@@ -4,49 +4,71 @@
     <div class="col-md-3">
       <div class="team-sidebar">
         <h2>Los Angeles Lakers</h2>
-        <a href="http://lakers.com">Official Team Site</a><br>
-        <a href="http://www.nba.com/lakers/roster">Team Roster</a><br>
-        <a href="http://staplescenter.com">Stadium</a><br>
-        Social Feeds:
-        <a href="http://instagram.com/lakers"> <i class="fa fa-instagram"></i></a> 
-        <a href="http://twitter.com/lakers"> <i class="fa fa-twitter"></i></a>    
-        <a href="http://lakers.tumblr.com"> <i class="fa fa-tumblr"></i></a>    
-        <a href="http://plus.google.com/+LosAngelesLakers"> <i class="fa fa-google-plus"></i></a>    
-        <a href="http://www.facebook.com/losangeleslakers"> <i class="fa fa-facebook"></i></a>    
+        <a href="http://lakers.com" target="_blank">Official Team Site</a><br>
+        <a href="http://www.nba.com/lakers/roster" target="_blank">Team Roster</a><br>
+        <a href="http://staplescenter.com" target="_blank">Stadium</a><br>
+        Team Social Feeds:
+        <a href="http://instagram.com/lakers" target="_blank"> <i class="fa fa-instagram"></i></a> 
+        <a href="http://twitter.com/lakers" target="_blank"> <i class="fa fa-twitter"></i></a>    
+        <a href="http://lakers.tumblr.com" target="_blank"> <i class="fa fa-tumblr"></i></a>    
+        <a href="http://plus.google.com/+LosAngelesLakers" target="_blank"> <i class="fa fa-google-plus"></i></a>    
+        <a href="http://www.facebook.com/losangeleslakers" target="_blank"> <i class="fa fa-facebook"></i></a>    
+      </div>
+
+      <div class="twitter">   
+        <h3><i class="fa fa-twitter fa-lg"></i> Recent Tweets </h3>
+        <% @twitter.each do |tweet| %>
+          <p>
+            <a href="http://www.twitter.com/<%= tweet.user.screen_name %>/status/<%= tweet.id %>" target="_blank"><%= tweet.text %></a>  
+            <span class="source">(<%= tweet.created_at.to_s(:created_date)  %>)</span>
+          </p>
+        <% end %>
       </div>
     </div>
 
-    <div class="col-md-9">
+    <div class="col-md-8">
     <!-- Top Row-Right -->
       <div class="row">
         <div class="col-md-4">
           <div class="team-header">Official Site</div>
-          <div class="links">
-
-            <% @lakers.each do |story| %>
-              <p><a href="<%=story.url %>" target="_blank"> <%= story.title %> </a> (<%= story.published.strftime("%-m/%-d,%Y, %-l:%M%P") %>)</p>
-            <% end %>
-
-          </div>
+          <!-- TODO: Refactor this! -->
+          <% @lakers.each do |story| %>
+            <div class="story">
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+              <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
+              <% if story.published.strftime("%-m/%-d,%Y") == Date.today.strftime("%-m/%-d,%Y") %> 
+                <span class="new"> <%= "New today!" %> </span>
+              <% end %>
+            </div>
+          <% end %>
         </div>
 
         <div class="col-md-4">
           <div class="team-header">Official Site</div>
-          <div class="links">
-
-            <% @lakers.each do |story| %>
-              <p><a href="<%=story.url %>" target="_blank"> <%= story.title %> </a> (<%= story.published.strftime("%-m/%-d,%Y, %-l:%M%P") %>)</p>
-            <% end %>
-          </div>
+          <!-- TODO: Refactor this! -->
+          <% @lakers.each do |story| %>
+            <div class="story">
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+              <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
+              <% if story.published.strftime("%-m/%-d,%Y") == Date.today.strftime("%-m/%-d,%Y") %> 
+                <span class="new"> <%= "New today!" %> </span>
+              <% end %>
+            </div>
+          <% end %>
         </div>
 
         <div class="col-md-4">
           <div class="team-header">Official Site</div>
-          <div class="links">
-            <% @lakers.each do |story| %>
-              <p><a href="<%=story.url %>" target="_blank"> <%= story.title %> </a> (<%= story.published.strftime("%-m/%-d,%Y, %-l:%M%P") %>)</p>
-            <% end %>
-          </div>
+          <!-- TODO: Refactor this! -->
+          <% @lakers.each do |story| %>
+            <div class="story">
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+              <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
+              <% if story.published.strftime("%-m/%-d,%Y") == Date.today.strftime("%-m/%-d,%Y") %> 
+                <span class="new"> <%= "New today!" %> </span>
+              <% end %>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>

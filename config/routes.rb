@@ -3,17 +3,17 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
-  resources :lakers
-  resources :clippers
-  resources :dodgers
-  resources :angels
-  resources :kings
-  resources :ducks
-  resources :bruins
-  resources :trojans
-  resources :sparks
-  resources :galaxies
-  resources :chivas
-  resources :preps
+  get "lakers" => "lakers#index"
+  get "clippers" => "clippers#index"
+  get "dodgers" => "dodgers#index"
+  get "angels" => "angels#index"
+  get "kings" => "kings#index"
+  get "ducks" => "ducks#index"
+  get "bruins" => "bruins#index"
+  get "trojans" => "trojans#index"
+  get "sparks" => "sparks#index"
+  get "galaxy" => "galaxies#index"
+  get "chivas" => "chivas#index"
+  get "preps" => "preps#index"
 
 end
