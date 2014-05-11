@@ -3,10 +3,10 @@ require 'feedjira'
 class OfficialSiteImporter
   def self.import
     source = "Official Site"
-    official_feed = Feedjira::Feed.fetch_and_parse("http://www.nba.com/lakers/rss.xml")
-    blog_feed = Feedjira::Feed.fetch_and_parse("http://blog.lakers.com/lakers/feed/")
-
-    feeds = [official_feed, blog_feed]
+    feeds = [
+      Feedjira::Feed.fetch_and_parse("http://www.nba.com/lakers/rss.xml"), 
+      Feedjira::Feed.fetch_and_parse("http://blog.lakers.com/lakers/feed/"),
+    ]
     
     feeds.each do |feed|
       if defined? feed.entries
@@ -17,9 +17,14 @@ class OfficialSiteImporter
             summary:    entry.summary,
             url:        entry.url,
             published:  entry.published,
-            # image:      entry.image,
-            source:     source
+            source:     source,
           )
+          if defined? entry.image
+            url = Laker.where(url: entry.url).first
+            if !url.image
+              url.update(image: entry.image)
+            end
+          end
         end
       end
     end

@@ -22,7 +22,7 @@ $shadow: 1px 1px 1px #000;
 /* bootstrap defaults- include before @import */
 $border-radius-base: 0;
 $navbar-inverse-bg: $base-color;
-$navbar-height: 40px;
+$navbar-height: 42px;
 $navbar-inverse-link-color: #fff;
 $navbar-inverse-link-hover-color: $secondary-color;
 $font-size-base: 13px;
@@ -49,7 +49,7 @@ body {
 
 #sub-bar {
   background-color: $secondary-color;
-  height: 8px;
+  height: 6px;
 }
 
 #title {
@@ -57,6 +57,18 @@ body {
   font-family: 'Signika', sans-serif;
   text-shadow: 1px 1px 1px #000;
   padding-left: 25px;
+}
+
+.notice {
+  margin-top: 15px;
+  color: green;
+  text-align: center;
+}
+
+.alert {
+  margin-top: 15px;
+  color: red;
+  text-align: center;
 }
 
 .jumbotron {
@@ -162,7 +174,7 @@ body {
   margin: 20px 0 0 20px;
   padding: 0 10px 15px 10px;
   height: 100%;
-  border: 1px solid $secondary-color;
+  border: 2px solid $secondary-color;
   border-radius: 5px;
 }
 
@@ -170,7 +182,7 @@ body {
   padding: 0 15px;
   margin: 20px 0 20px 20px;
   text-align: center;
-  border: 1px solid $secondary-color;
+  border: 2px solid $secondary-color;
   border-radius: 5px;
 }
 
