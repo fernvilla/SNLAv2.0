@@ -35,7 +35,7 @@
           <!-- TODO: Refactor this! -->
           <% @lakers.each do |story| %>
             <div class="story">
-              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> <br>
               <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
               <% if story.published.strftime("%-m/%-d,%Y") == Date.today.strftime("%-m/%-d,%Y") %> 
                 <span class="new"> <%= "New today!" %> </span>
@@ -45,9 +45,9 @@
         </div>
 
         <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="team-header">Official Site</div>
+          <div class="team-header">Los Angeles Times</div>
           <!-- TODO: Refactor this! -->
-          <% @lakers.each do |story| %>
+          <% @la_times.each do |story| %>
             <div class="story">
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
               <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
@@ -59,9 +59,54 @@
         </div>
 
         <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="team-header">Official Site</div>
+          <div class="team-header">ESPN</div>
           <!-- TODO: Refactor this! -->
-          <% @lakers.each do |story| %>
+          <% @espn.each do |story| %>
+            <div class="story">
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> <br>
+              <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
+              <% if story.published.strftime("%-m/%-d,%Y") == Date.today.strftime("%-m/%-d,%Y") %> 
+                <span class="new"> <%= "New today!" %> </span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <!-- 2nd Row -->
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="team-header">Orange County Register</div>
+          <!-- TODO: Refactor this! -->
+          <% @oc_register.each do |story| %>
+            <div class="story">
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a>
+              <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
+              <% if story.published.strftime("%-m/%-d,%Y") == Date.today.strftime("%-m/%-d,%Y") %> 
+                <span class="new"> <%= "New today!" %> </span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="team-header">CBS Los Angeles</div>
+          <!-- TODO: Refactor this! -->
+          <% @cbs.each do |story| %>
+            <div class="story">
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+              <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
+              <% if story.published.strftime("%-m/%-d,%Y") == Date.today.strftime("%-m/%-d,%Y") %> 
+                <span class="new"> <%= "New today!" %> </span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="team-header">Bleacher Report</div>
+          <!-- TODO: Refactor this! -->
+          <% @bleacher_report.each do |story| %>
             <div class="story">
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
               <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
@@ -72,6 +117,69 @@
           <% end %>
         </div>
       </div>
+
+      <!--Instagram-->
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="team-header">
+            <i class="fa fa-instagram"></i>
+            Instagram
+          </div>
+          <!-- TODO: Refactor this! -->
+          <% @instagram.take(10).each do |image| %>
+          <p class="instagram">
+            <a href="<%= image.link %>" target="blank"><img src="<%=image.images.thumbnail.url %>" ></a>
+          </p>
+          <% end %>
+        </div>
+      </div>
+
+      <!-- 4th Row -->
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="team-header">FOX Sports</div>
+          <!-- TODO: Refactor this! -->
+          <% @fox_sports.each do |story| %>
+            <div class="story">
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a>
+              <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
+              <% if story.published.strftime("%-m/%-d,%Y") == Date.today.strftime("%-m/%-d,%Y") %> 
+                <span class="new"> <%= "New today!" %> </span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="team-header">Daily News</div>
+          <!-- TODO: Refactor this! -->
+          <% @daily_news.each do |story| %>
+            <div class="story">
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+              <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
+              <% if story.published.strftime("%-m/%-d,%Y") == Date.today.strftime("%-m/%-d,%Y") %> 
+                <span class="new"> <%= "New today!" %> </span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="team-header">Inside The Lakers</div>
+          <!-- TODO: Refactor this! -->
+          <% @inside_lakers.each do |story| %>
+            <div class="story">
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a>
+              <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
+              <% if story.published.strftime("%-m/%-d,%Y") == Date.today.strftime("%-m/%-d,%Y") %> 
+                <span class="new"> <%= "New today!" %> </span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+
     </div>
   </div>
 </div>
