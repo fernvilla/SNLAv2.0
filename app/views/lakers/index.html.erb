@@ -7,12 +7,12 @@
         <a href="http://lakers.com" target="_blank">Official Team Site</a><br>
         <a href="http://www.nba.com/lakers/roster" target="_blank">Team Roster</a><br>
         <a href="http://staplescenter.com" target="_blank">Stadium</a><br>
-        Team Social Feeds:
-        <a href="http://instagram.com/lakers" target="_blank"> <i class="fa fa-instagram"></i></a> 
-        <a href="http://twitter.com/lakers" target="_blank"> <i class="fa fa-twitter"></i></a>    
-        <a href="http://lakers.tumblr.com" target="_blank"> <i class="fa fa-tumblr"></i></a>    
-        <a href="http://plus.google.com/+LosAngelesLakers" target="_blank"> <i class="fa fa-google-plus"></i></a>    
-        <a href="http://www.facebook.com/losangeleslakers" target="_blank"> <i class="fa fa-facebook"></i></a>    
+
+        <a href="http://instagram.com/lakers" target="_blank"> <i class="fa fa-instagram fa-lg"></i></a> 
+        <a href="http://twitter.com/lakers" target="_blank"> <i class="fa fa-twitter fa-lg"></i></a>    
+        <a href="http://lakers.tumblr.com" target="_blank"> <i class="fa fa-tumblr fa-lg"></i></a>    
+        <a href="http://plus.google.com/+LosAngelesLakers" target="_blank"> <i class="fa fa-google-plus fa-lg"></i></a>    
+        <a href="http://www.facebook.com/losangeleslakers" target="_blank"> <i class="fa fa-facebook fa-lg"></i></a>    
       </div>
 
       <div class="twitter">   
@@ -52,7 +52,7 @@
                 <img src="<%= story.image %>" alt="" class="story-image">
               <% end %>
 
-              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> <br>
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
               <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
 
               <!-- Check if new -->
