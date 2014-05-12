@@ -11,13 +11,14 @@ class LakersController < ApplicationController
     @inside_lakers = Laker.where(source: "Inside The Lakers").limit_and_order
 
     # Twitter
-    @client = Twitter::REST::Client.new do |config|
+    client = Twitter::REST::Client.new do |config|
       config.consumer_key        = ENV["TWITTER_KEY"]
       config.consumer_secret     = ENV["TWITTER_SECRET"]
       config.access_token        = ENV["TWITTER_ACCESS_TOKEN"]
       config.access_token_secret = ENV["TWITTER_ACCESS_TOKEN_SECRET"]
     end
-    @twitter = @client.user_timeline('lakers').take(12)
+    @twitter = client.user_timeline('lakers').take(12)
+    @kobe = client.user_timeline('kobebryant').take(12)
 
     # Instagram
     Instagram.configure do |config|
