@@ -89,7 +89,7 @@
               <% if story.image %>
                 <img src="<%= story.image %>" alt="" class="story-image">
               <% end %>
-              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> <br>
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a>
               <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
               <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
                 <span class="new"> <%= "New today!" %> </span>
@@ -161,7 +161,7 @@
             Instagram
           </div>
           <!-- TODO: Refactor this! -->
-          <% @instagram.take(10).each do |image| %>
+          <% @instagram.take(12).each do |image| %>
           <p class="instagram">
             <a href="<%= image.link %>" target="blank"><img src="<%=image.images.thumbnail.url %>" ></a>
           </p>

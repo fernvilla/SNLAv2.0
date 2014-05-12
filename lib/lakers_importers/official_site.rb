@@ -21,9 +21,7 @@ class OfficialSiteImporter
           )
           if defined? entry.image
             url = Laker.where(url: entry.url).first
-            if !url.image
-              url.update(image: entry.image)
-            end
+            url.update(image: entry.image)
           end
         end
       end

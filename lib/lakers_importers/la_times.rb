@@ -19,11 +19,9 @@ class LATimesImporter
             published:  entry.published,
             source:     source,
           )
-          if defined? entry.image
+          if defined? entry.image && entry.image == null
             url = Laker.where(url: entry.url).first
-            if !url.image
-              url.update(image: entry.image)
-            end
+            url.update(image: entry.image)
           end
         end
       end

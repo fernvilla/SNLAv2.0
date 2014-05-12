@@ -83,8 +83,8 @@ body {
 .home-image {
   width: 90%;
   height: auto;
-  box-shadow: 3px 3px 5px #000;
-  border: 2px solid #bababa;
+  box-shadow: 1px 1px 1px #000;
+  /*border: 2px solid #bababa;*/
 }
 
 #social-container {
@@ -248,7 +248,7 @@ a {
 
 .instagram {
   float: left;
-  margin: 4px 18px;
+  padding-left: 4px;
   img {
     box-shadow: 1px 1px 1px #000;
  }
@@ -256,12 +256,20 @@ a {
 
 @media (max-width: 400px) {
   .instagram {
-    margin: 5px 5px 5px 20px;
+    margin: 0 auto;
+    padding-left: 5px;
+    img {
+      height: 140px;
+      width: 140px;
+    }
   }
   .team-sidebar {
     margin: 10px 0;
   }
   .twitter {
     margin: 10px 0 0 0;
+  }
+  .home-image {
+    display: none;
   }
 }
