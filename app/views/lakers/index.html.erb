@@ -20,7 +20,7 @@
         <% @twitter.each do |tweet| %>
           <p>
             <a href="http://www.twitter.com/<%= tweet.user.screen_name %>/status/<%= tweet.id %>" target="_blank"><%= tweet.text %></a>  
-            <span class="source">(<%= tweet.created_at.to_s(:created_date)  %>)</span>
+            <span class="timestamp">(<%= tweet.created_at.to_s(:created_date)  %>)</span>
           </p>
         <% end %>
       </div>
@@ -30,13 +30,13 @@
     <div class=" col-sm-8 col-md-8">
       <!-- Top Row -->
       <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="col-xs-12 col-sm-6 col-md-4 news-source">
           <div class="team-header">Official Site</div>
           <!-- TODO: Refactor this! -->
           <% @lakers.each do |story| %>
             <div class="story">
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> <br>
-              <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
+              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
               <% if story.published.strftime("%-m/%-d,%Y") == Date.today.strftime("%-m/%-d,%Y") %> 
                 <span class="new"> <%= "New today!" %> </span>
               <% end %>
@@ -50,7 +50,7 @@
           <% @la_times.each do |story| %>
             <div class="story">
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
-              <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
+              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
               <% if story.published.strftime("%-m/%-d,%Y") == Date.today.strftime("%-m/%-d,%Y") %> 
                 <span class="new"> <%= "New today!" %> </span>
               <% end %>
@@ -64,7 +64,7 @@
           <% @espn.each do |story| %>
             <div class="story">
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> <br>
-              <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
+              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
               <% if story.published.strftime("%-m/%-d,%Y") == Date.today.strftime("%-m/%-d,%Y") %> 
                 <span class="new"> <%= "New today!" %> </span>
               <% end %>
@@ -81,7 +81,7 @@
           <% @oc_register.each do |story| %>
             <div class="story">
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a>
-              <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
+              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
               <% if story.published.strftime("%-m/%-d,%Y") == Date.today.strftime("%-m/%-d,%Y") %> 
                 <span class="new"> <%= "New today!" %> </span>
               <% end %>
@@ -95,7 +95,7 @@
           <% @cbs.each do |story| %>
             <div class="story">
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
-              <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
+              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
               <% if story.published.strftime("%-m/%-d,%Y") == Date.today.strftime("%-m/%-d,%Y") %> 
                 <span class="new"> <%= "New today!" %> </span>
               <% end %>
@@ -109,7 +109,7 @@
           <% @bleacher_report.each do |story| %>
             <div class="story">
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
-              <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
+              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
               <% if story.published.strftime("%-m/%-d,%Y") == Date.today.strftime("%-m/%-d,%Y") %> 
                 <span class="new"> <%= "New today!" %> </span>
               <% end %>
@@ -142,7 +142,7 @@
           <% @fox_sports.each do |story| %>
             <div class="story">
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a>
-              <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
+              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
               <% if story.published.strftime("%-m/%-d,%Y") == Date.today.strftime("%-m/%-d,%Y") %> 
                 <span class="new"> <%= "New today!" %> </span>
               <% end %>
@@ -156,7 +156,7 @@
           <% @daily_news.each do |story| %>
             <div class="story">
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
-              <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
+              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
               <% if story.published.strftime("%-m/%-d,%Y") == Date.today.strftime("%-m/%-d,%Y") %> 
                 <span class="new"> <%= "New today!" %> </span>
               <% end %>
@@ -170,7 +170,7 @@
           <% @inside_lakers.each do |story| %>
             <div class="story">
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a>
-              <span class="source"> (<%= story.published.to_s(:created_date) %>) </span>
+              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
               <% if story.published.strftime("%-m/%-d,%Y") == Date.today.strftime("%-m/%-d,%Y") %> 
                 <span class="new"> <%= "New today!" %> </span>
               <% end %>
