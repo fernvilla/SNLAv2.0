@@ -11,10 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140513192330) do
+ActiveRecord::Schema.define(version: 20140513201801) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "angels", force: true do |t|
+    t.text     "title"
+    t.string   "author"
+    t.text     "summary"
+    t.datetime "published"
+    t.string   "image"
+    t.string   "source"
+    t.text     "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bruins", force: true do |t|
+    t.text     "title"
+    t.string   "author"
+    t.text     "summary"
+    t.datetime "published"
+    t.string   "image"
+    t.string   "source"
+    t.text     "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "chivas", force: true do |t|
+    t.text     "title"
+    t.string   "author"
+    t.text     "summary"
+    t.datetime "published"
+    t.string   "image"
+    t.string   "source"
+    t.text     "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "clippers", force: true do |t|
     t.text     "title"
@@ -28,7 +64,91 @@ ActiveRecord::Schema.define(version: 20140513192330) do
     t.datetime "updated_at"
   end
 
+  create_table "dodgers", force: true do |t|
+    t.text     "title"
+    t.string   "author"
+    t.text     "summary"
+    t.datetime "published"
+    t.string   "image"
+    t.string   "source"
+    t.text     "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ducks", force: true do |t|
+    t.text     "title"
+    t.string   "author"
+    t.text     "summary"
+    t.datetime "published"
+    t.string   "image"
+    t.string   "source"
+    t.text     "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "galaxies", force: true do |t|
+    t.text     "title"
+    t.string   "author"
+    t.text     "summary"
+    t.datetime "published"
+    t.string   "image"
+    t.string   "source"
+    t.text     "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "kings", force: true do |t|
+    t.text     "title"
+    t.string   "author"
+    t.text     "summary"
+    t.datetime "published"
+    t.string   "image"
+    t.string   "source"
+    t.text     "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "lakers", force: true do |t|
+    t.text     "title"
+    t.string   "author"
+    t.text     "summary"
+    t.datetime "published"
+    t.string   "image"
+    t.string   "source"
+    t.text     "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "preps", force: true do |t|
+    t.text     "title"
+    t.string   "author"
+    t.text     "summary"
+    t.datetime "published"
+    t.string   "image"
+    t.string   "source"
+    t.text     "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sparks", force: true do |t|
+    t.text     "title"
+    t.string   "author"
+    t.text     "summary"
+    t.datetime "published"
+    t.string   "image"
+    t.string   "source"
+    t.text     "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "trojans", force: true do |t|
     t.text     "title"
     t.string   "author"
     t.text     "summary"
