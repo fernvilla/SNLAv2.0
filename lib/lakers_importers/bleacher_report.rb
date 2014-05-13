@@ -1,6 +1,6 @@
 require 'feedjira'
 
-class BleacherReportImporter
+class LakersBleacherReportImporter
   def self.import
     source = "Bleacher Report"
     feed = Feedjira::Feed.fetch_and_parse("http://bleacherreport.com/articles/feed?tag_id=203")

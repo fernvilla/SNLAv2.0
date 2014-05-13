@@ -1,6 +1,6 @@
 require 'feedjira'
 
-class OfficialSiteImporter
+class LakersOfficialSiteImporter
   def self.import
     source = "Official Site"
     feeds = [

@@ -1,6 +1,6 @@
 require 'feedjira'
 
-class LATimesImporter
+class LakersLATimesImporter
   def self.import
     source = "LA Times"
     feeds = [

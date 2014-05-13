@@ -1,6 +1,6 @@
 require 'feedjira'
 
-class FoxSportsImporter
+class LakersFoxSportsImporter
   def self.import
     source = "FOX Sports"
     feed = Feedjira::Feed.fetch_and_parse("http://feeds.foxsports.com/feedout/syndicatedContent?categoryId=71087")

@@ -1,6 +1,6 @@
 require 'feedjira'
 
-class CBSImporter
+class LakersCBSImporter
   def self.import
     source = "CBS Los Angeles"
     feed = Feedjira::Feed.fetch_and_parse("http://losangeles.cbslocal.com/category/sports/lakers/feed/")

@@ -1,2 +1,228 @@
-<h1>Clippers#index</h1>
-<p>Find me in app/views/clippers/index.html.erb</p>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Left Side-Bar -->
+    <div class="col-sm-4 col-md-3">
+      <div class="team-sidebar">
+        <h2>Los Angeles Clippers</h2>
+        <a href="http://www.clippers.com/" target="_blank">Official Team Site</a> <br>
+        <a href="http://www.clippers.com/roster" target="_blank">Team Roster</a> <br>
+        <a href="http://www.staplescenter.com/" target="_blank">Stadium</a> <br>
+        <a href="http://instagram.com/laclippers" target="_blank"> <i class="fa fa-instagram fa-lg"></i></a> 
+        <a href="http://twitter.com/laclippers" target="_blank"> <i class="fa fa-twitter fa-lg"></i></a>       
+        <a href="https://plus.google.com/+laclippers/" target="_blank"> <i class="fa fa-google-plus fa-lg"></i></a>    
+        <a href="http://www.facebook.com/laclippers" target="_blank"> <i class="fa fa-facebook fa-lg"></i></a>    
+        <a href="http://www.pinterest.com/laclippers/" target="_blank"> <i class="fa fa-pinterest fa-lg"></i></a>         
+        <a href="http://www.youtube.com/user/clippers1970" target="_blank"> <i class="fa fa-youtube fa-lg"></i></a>         
+        <a href="http://www.linkedin.com/company/los-angeles-clippers" target="_blank"> <i class="fa fa-linkedin fa-lg"></i></a>  
+      </div>
+
+      <div class="twitter">   
+        <h3><i class="fa fa-twitter fa-lg"></i> Recent Team Tweets </h3>
+        <% @twitter.each do |tweet| %>
+          <p>
+            <a href="http://www.twitter.com/<%= tweet.user.screen_name %>/status/<%= tweet.id %>" target="_blank"><%= tweet.text %></a>  
+            <span class="timestamp">(<%= tweet.created_at.to_s(:created_date)  %>)</span>
+          </p>
+        <% end %>
+      </div>
+
+      <div class="twitter">   
+        <h3><i class="fa fa-twitter fa-lg"></i> Recent Player Tweets </h3>
+        <% @kobe.each do |tweet| %>
+          <p>
+            <%= tweet.user.screen_name.capitalize %>: 
+            <a href="http://www.twitter.com/<%= tweet.user.screen_name %>/status/<%= tweet.id %>" target="_blank"><%= tweet.text %></a>  
+            <span class="timestamp">(<%= tweet.created_at.to_s(:created_date)  %>)</span>
+          </p>
+        <% end %>
+      </div>
+    </div>
+    
+    <!-- Right side of page -->
+    <div class=" col-sm-8 col-md-8">
+      <!-- Top Row -->
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 news-source">
+          <div class="team-header">Official Site</div>
+          <!-- TODO: Refactor this! -->
+          <% @clippers.each do |story| %>
+            <div class="story">
+
+              <!-- Image, if available -->
+              <% if story.image %>
+                <img src="<%= story.image %>" alt="" class="story-image">
+              <% end %>
+
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
+
+              <!-- Check if new -->
+              <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
+                <span class="new"> <%= "New today!" %> </span>
+              <% end %>
+
+            </div>
+          <% end %>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="team-header">Los Angeles Times</div>
+          <!-- TODO: Refactor this! -->
+          <% @la_times.each do |story| %>
+            <div class="story">
+              <% if story.image %>
+                <img src="<%= story.image %>" alt="" class="story-image">
+              <% end %>
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
+              <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
+                <span class="new"> <%= "New today!" %> </span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="team-header">ESPN</div>
+          <!-- TODO: Refactor this! -->
+          <% @espn.each do |story| %>
+            <div class="story">
+              <% if story.image %>
+                <img src="<%= story.image %>" alt="" class="story-image">
+              <% end %>
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a>
+              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
+              <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
+                <span class="new"> <%= "New today!" %> </span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <!-- 2nd Row -->
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="team-header">Orange County Register</div>
+          <!-- TODO: Refactor this! -->
+          <% @oc_register.each do |story| %>
+            <div class="story">
+              <% if story.image %>
+                <img src="<%= story.image %>" alt="" class="story-image">
+              <% end %>
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a>
+              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
+              <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
+                <span class="new"> <%= "New today!" %> </span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="team-header">CBS Los Angeles</div>
+          <!-- TODO: Refactor this! -->
+          <% @cbs.each do |story| %>
+            <div class="story">
+              <% if story.image %>
+                <img src="<%= story.image %>" alt="" class="story-image">
+              <% end %>
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
+              <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
+                <span class="new"> <%= "New today!" %> </span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="team-header">Bleacher Report</div>
+          <!-- TODO: Refactor this! -->
+          <% @bleacher_report.each do |story| %>
+            <div class="story"> 
+              <% if story.image %>
+                <img src="<%= story.image %>" alt="" class="story-image">
+              <% end %>
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
+              <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
+                <span class="new"> <%= "New today!" %> </span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <!--Instagram-->
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="team-header">
+            <i class="fa fa-instagram"></i>
+            Instagram
+          </div>
+          <!-- TODO: Refactor this! -->
+          <% @instagram.take(12).each do |image| %>
+          <p class="instagram">
+            <a href="<%= image.link %>" target="blank"><img src="<%=image.images.thumbnail.url %>" ></a>
+          </p>
+          <% end %>
+        </div>
+      </div>
+
+      <!-- 4th Row -->
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="team-header">FOX Sports</div>
+          <!-- TODO: Refactor this! -->
+          <% @fox_sports.each do |story| %>
+            <div class="story">
+              <% if story.image %>
+                <img src="<%= story.image %>" alt="" class="story-image">
+              <% end %>
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a>
+              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
+              <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
+                <span class="new"> <%= "New today!" %> </span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="team-header">Daily News</div>
+          <!-- TODO: Refactor this! -->
+          <% @daily_news.each do |story| %>
+            <div class="story">
+             
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
+              <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
+                <span class="new"> <%= "New today!" %> </span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="team-header">Inside The Clippers</div>
+          <!-- TODO: Refactor this! -->
+          <% @inside_clippers.each do |story| %>
+            <div class="story">
+              <% if story.image %>
+                <img src="<%= story.image %>" alt="" class="story-image">
+              <% end %>
+              <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a>
+              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
+              <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
+                <span class="new"> <%= "New today!" %> </span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

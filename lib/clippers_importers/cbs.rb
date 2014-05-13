@@ -1,13 +1,13 @@
 require 'feedjira'
 
-class LakersDailyNewsImporter
+class ClippersCBSImporter
   def self.import
-    source = "Daily News"
-    feed = Feedjira::Feed.fetch_and_parse("http://www.dailynews.com/section?template=RSS&profile=4000078&mime=xml")
-
+    source = "CBS Los Angeles"
+    feed = Feedjira::Feed.fetch_and_parse("http://losangeles.cbslocal.com/category/sports/clippers/feed/")
+    
     if defined? feed.entries
       feed.entries.each do |entry|
-        Laker.where(url: entry.url).first_or_create(
+        Clipper.where(url: entry.url).first_or_create(
           title:      entry.title,
           author:     entry.author,
           summary:    entry.summary,
@@ -16,7 +16,7 @@ class LakersDailyNewsImporter
           source:     source,
         )
         if defined? entry.image && !entry.image 
-          url = Laker.where(url: entry.url).first
+          url = Clipper.where(url: entry.url).first
           url.update(image: entry.image)
         end
       end

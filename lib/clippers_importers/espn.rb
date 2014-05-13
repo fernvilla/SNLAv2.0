@@ -1,11 +1,11 @@
 require 'feedjira'
 
-class LakersESPNImporter
+class ClippersESPNImporter
   def self.import
     source = "ESPN"
     feeds = [
-      Feedjira::Feed.fetch_and_parse("http://espn.go.com/blog/feed?blog=los-angeleslakers"),
-      Feedjira::Feed.fetch_and_parse("http://search.espn.go.com/rss/lakers/")
+      Feedjira::Feed.fetch_and_parse("http://espn.go.com/blog/feed?blog=los-angelesclippers"),
+      Feedjira::Feed.fetch_and_parse("http://search.espn.go.com/rss/clippers/")
     ]
     
     feeds.each do |feed|
@@ -13,7 +13,7 @@ class LakersESPNImporter
         feed.entries.each do |entry|
           # Remove '#x26;' from titles
           title = entry.title.gsub(/#x26;/, '')
-          Laker.where(url: entry.url).first_or_create(
+          Clipper.where(url: entry.url).first_or_create(
             title:      title,
             author:     entry.author,
             summary:    entry.summary,
@@ -22,7 +22,7 @@ class LakersESPNImporter
             source:     source,
           )
           if defined? entry.image && !entry.image 
-            url = Laker.where(url: entry.url).first
+            url = Clipper.where(url: entry.url).first
             url.update(image: entry.image)
           end
         end

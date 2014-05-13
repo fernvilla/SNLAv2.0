@@ -1,6 +1,6 @@
 require 'feedjira'
 
-class OCRegisterImporter
+class LakersOCRegisterImporter
   def self.import
     source = "OC Register"
     feed = Feedjira::Feed.fetch_and_parse("http://www.ocregister.com/common/rss/rss.php?catID=18904")
