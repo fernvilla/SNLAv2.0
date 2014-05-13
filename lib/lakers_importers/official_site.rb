@@ -11,8 +11,9 @@ class OfficialSiteImporter
     feeds.each do |feed|
       if defined? feed.entries
         feed.entries.each do |entry|
+          title = entry.title.gsub(/amp;/, ' ')
           Laker.where(url: entry.url).first_or_create(
-            title:      entry.title,
+            title:      title,
             author:     entry.author,
             summary:    entry.summary,
             url:        entry.url,
