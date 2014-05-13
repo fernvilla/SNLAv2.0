@@ -30,7 +30,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 
 # Heroku
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 
 # Testing
 group :test, :development do

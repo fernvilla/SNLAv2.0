@@ -28,5 +28,10 @@ class LakersController < ApplicationController
     end
     @instagram = Instagram.user_recent_media(16917874)
 
+    respond_to do |format|
+      format.html
+      # format.json { render json: @lakers.to_json } 
+      format.json { render json: Laker.all } 
+    end
   end
 end

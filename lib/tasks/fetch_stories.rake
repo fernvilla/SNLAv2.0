@@ -1,12 +1,6 @@
-require 'lakers_importers/official_site'
-require 'lakers_importers/la_times'
-require 'lakers_importers/espn'
-require 'lakers_importers/oc_register'
-require 'lakers_importers/cbs'
-require 'lakers_importers/bleacher_report'
-require 'lakers_importers/fox_sports'
-require 'lakers_importers/daily_news'
-require 'lakers_importers/inside_lakers'
+Dir[File.expand_path('../lakers_importers/*.rb', File.dirname(__FILE__))].each do |file|
+  require file
+end
 
 namespace :sync do
   desc "Fetch new Lakers stories"
