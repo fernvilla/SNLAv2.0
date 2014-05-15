@@ -72,7 +72,7 @@ body {
 }
 
 .jumbotron {
-  height: 100%;
+  margin: 0;
   background-color: #22376b;
   color: #fff;
   text-align: center;
@@ -87,13 +87,18 @@ body {
   border: 2px solid $base-color;
 }
 
-.headline {
+.headlines {
   border-top: 1px solid #cbcbcb;
   border-bottom: 1px solid #cbcbcb;
   color: $base-color;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
-  margin: 0 5px;
+  margin: 15px 3px 0 3px;
+  padding: 3px 10px;
+}
+
+.home {
+  padding: 0 20px;
 }
 
 #social-container {
@@ -214,8 +219,8 @@ body {
 
 .story {
   border-bottom: 1px solid #e6e6e6;
-  padding: 2px;
   min-height: 50px;
+  padding: 2px 5px;
   &:hover {
     background-color:#efefef;
     border-radius: 5px;

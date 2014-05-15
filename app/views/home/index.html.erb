@@ -17,13 +17,13 @@
 </div>
 
 <div class="container-fluid">
-  <div class="row headline">
+  <div class="row headlines">
     Latest Team Headlines
   </div>
 </div>
 
 <div class="container-fluid">
-  <div class="row">
+  <div class="row home">
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">Lakers</div>
       <!-- TODO: Refactor this! -->
@@ -36,12 +36,7 @@
           <% end %>
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
-          <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
-
-          <!-- Check if new -->
-          <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
-            <span class="new"> <%= "New today!" %> </span>
-          <% end %>
+          <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
 
         </div>
       <% end %>
@@ -59,68 +54,63 @@
           <% end %>
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
-          <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
-
-          <!-- Check if new -->
-          <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
-            <span class="new"> <%= "New today!" %> </span>
-          <% end %>
+          <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
 
         </div>
       <% end %>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header"><%= link_to "Dodgers", dodgers_path %></div>
+      <div class="team-header">Dodgers</div>
       
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header"><%= link_to "Angels", angels_path %></div>
+      <div class="team-header">Angels</div>
       
     </div>
   </div>
 
-  <div class="row">
+  <div class="row home">
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header"><%= link_to "UCLA", bruins_path %></div>
+      <div class="team-header">UCLA Bruins</div>
    
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header"><%= link_to "USC", trojans_path %></div>
+      <div class="team-header">USC Trojans</div>
       
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header"><%= link_to "Kings", kings_path %></div>
+      <div class="team-header">Kings</div>
       
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header"><%= link_to "Ducks", ducks_path %></div>
+      <div class="team-header">Ducks</div>
       
     </div>
   </div>
 
-  <div class="row">
+  <div class="row home">
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header"><%= link_to "Galaxy", galaxy_path %></div>
+      <div class="team-header">Galaxy</div>
       
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header"><%= link_to "Chivas", chivas_path %></div>
+      <div class="team-header">Chivas USA</div>
       
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header"><%= link_to "Sparks", sparks_path %></div>
+      <div class="team-header">Sparks</div>
       
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header"><%= link_to "High School", preps_path %></div>
+      <div class="team-header">High School</div>
       
     </div>
   </div>
