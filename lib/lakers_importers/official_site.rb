@@ -11,7 +11,7 @@ class LakersOfficialSiteImporter
     feeds.each do |feed|
       if defined? feed.entries
         feed.entries.each do |entry|
-          title = entry.title.gsub(/amp;/, ' ')
+          title = entry.title.gsub(/amp;/, ' ').gsub(/&#039;/, "'")
           Laker.where(url: entry.url).first_or_create(
             title:      title,
             author:     entry.author,

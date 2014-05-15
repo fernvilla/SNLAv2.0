@@ -8,7 +8,7 @@ class ClippersOfficialSiteImporter
     if defined? feed.entries
       feed.entries.each do |entry|
         Clipper.where(url: entry.url).first_or_create(
-          title:      entry.title,
+          title:      entry.title.downcase.capitalize,
           author:     entry.author,
           summary:    entry.summary,
           url:        entry.url,
