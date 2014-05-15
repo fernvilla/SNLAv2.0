@@ -62,56 +62,187 @@
 
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">Dodgers</div>
+      <!-- TODO: Refactor this! -->
+      <% @dodgers.each do |story| %>
+        <div class="story">
+
+          <!-- Image, if available -->
+          <% if story.image %>
+            <img src="<%= story.image %>" alt="" class="story-image">
+          <% end %>
+
+          <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+          <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
+
+        </div>
+      <% end %>
       
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">Angels</div>
-      
+      <!-- TODO: Refactor this! -->
+      <% @angels.each do |story| %>
+        <div class="story">
+
+          <!-- Image, if available -->
+          <% if story.image %>
+            <img src="<%= story.image %>" alt="" class="story-image">
+          <% end %>
+
+          <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+          <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
+
+        </div>
+      <% end %>
     </div>
   </div>
 
   <div class="row home">
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">UCLA Bruins</div>
-   
+      <!-- TODO: Refactor this! -->
+      <% @bruins.each do |story| %>
+        <div class="story">
+
+          <!-- Image, if available -->
+          <% if story.image %>
+            <img src="<%= story.image %>" alt="" class="story-image">
+          <% end %>
+
+          <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+          <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
+
+        </div>
+      <% end %>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">USC Trojans</div>
-      
+      <!-- TODO: Refactor this! -->
+      <% @trojans.each do |story| %>
+        <div class="story">
+
+          <!-- Image, if available -->
+          <% if story.image %>
+            <img src="<%= story.image %>" alt="" class="story-image">
+          <% end %>
+
+          <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+          <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
+
+        </div>
+      <% end %>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">Kings</div>
-      
+      <!-- TODO: Refactor this! -->
+      <% @kings.each do |story| %>
+        <div class="story">
+
+          <!-- Image, if available -->
+          <% if story.image %>
+            <img src="<%= story.image %>" alt="" class="story-image">
+          <% end %>
+
+          <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+          <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
+
+        </div>
+      <% end %>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">Ducks</div>
-      
+      <!-- TODO: Refactor this! -->
+      <% @ducks.each do |story| %>
+        <div class="story">
+
+          <!-- Image, if available -->
+          <% if story.image %>
+            <img src="<%= story.image %>" alt="" class="story-image">
+          <% end %>
+
+          <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+          <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
+
+        </div>
+      <% end %>
     </div>
   </div>
 
   <div class="row home">
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">Galaxy</div>
-      
+      <!-- TODO: Refactor this! -->
+      <% @galaxy.each do |story| %>
+        <div class="story">
+
+          <!-- Image, if available -->
+          <% if story.image %>
+            <img src="<%= story.image %>" alt="" class="story-image">
+          <% end %>
+
+          <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+          <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
+
+        </div>
+      <% end %>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">Chivas USA</div>
-      
+      <!-- TODO: Refactor this! -->
+      <% @chivas.each do |story| %>
+        <div class="story">
+
+          <!-- Image, if available -->
+          <% if story.image %>
+            <img src="<%= story.image %>" alt="" class="story-image">
+          <% end %>
+
+          <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+          <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
+
+        </div>
+      <% end %>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">Sparks</div>
-      
+      <!-- TODO: Refactor this! -->
+      <% @sparks.each do |story| %>
+        <div class="story">
+
+          <!-- Image, if available -->
+          <% if story.image %>
+            <img src="<%= story.image %>" alt="" class="story-image">
+          <% end %>
+
+          <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+          <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
+
+        </div>
+      <% end %>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">High School</div>
-      
+      <!-- TODO: Refactor this! -->
+      <% @preps.each do |story| %>
+        <div class="story">
+
+          <!-- Image, if available -->
+          <% if story.image %>
+            <img src="<%= story.image %>" alt="" class="story-image">
+          <% end %>
+
+          <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
+          <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
+
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
