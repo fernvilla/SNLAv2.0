@@ -123,6 +123,26 @@ namespace :sync do
     puts "There are now #{Chiva.count} Chivas stories. #{newly_added} were just added."
   end
 
+  desc "Fetch new Sparks stories"
+  task :sparks => :environment do
+    original_count = Spark.count
+
+    SparksESPNSiteImporter.import
+
+    newly_added = Spark.count - original_count
+    puts "There are now #{Spark.count} Sparks stories. #{newly_added} were just added."
+  end
+
+  desc "Fetch new Preps stories"
+  task :preps => :environment do
+    original_count = Prep.count
+
+    PrepsOCRegisterSiteImporter.import
+
+    newly_added = Prep.count - original_count
+    puts "There are now #{Prep.count} Preps stories. #{newly_added} were just added."
+  end
+
   desc "Fetch all teams' stories"
-  task :all => [:lakers, :clippers, :dodgers, :angels, :kings, :ducks, :galaxy, :chivas, :ucla, :usc]
+  task :all => [:lakers, :clippers, :dodgers, :angels, :kings, :ducks, :galaxy, :chivas, :ucla, :usc, :sparks, :preps]
 end
