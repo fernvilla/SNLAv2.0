@@ -15,10 +15,10 @@ class ClippersDailyNewsImporter
           published:  entry.published,
           source:     source,
         )
-        if defined? entry.image && !entry.image 
-          url = Clipper.where(url: entry.url).first
-          url.update(image: entry.image)
-        end
+        # if defined? entry.image && !entry.image 
+        #   url = Clipper.where(url: entry.url).first
+        #   url.update(image: entry.image)
+        # end
       end
     end
   end
