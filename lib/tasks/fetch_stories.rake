@@ -1,50 +1,9 @@
-# TODO: REFORMAT THIS!
-Dir[File.expand_path('../lakers_importers/*.rb', File.dirname(__FILE__))].each do |file|
-  require file
-end
+teams = ['lakers', 'clippers', 'angels', 'dodgers', 'ducks', 'galaxy', 'kings', 'chivas', 'ucla', 'usc', 'sparks', 'preps']
 
-Dir[File.expand_path('../clippers_importers/*.rb', File.dirname(__FILE__))].each do |file|
-  require file
-end
-
-Dir[File.expand_path('../angels_importers/*.rb', File.dirname(__FILE__))].each do |file|
-  require file
-end
-
-Dir[File.expand_path('../dodgers_importers/*.rb', File.dirname(__FILE__))].each do |file|
-  require file
-end
-
-Dir[File.expand_path('../ducks_importers/*.rb', File.dirname(__FILE__))].each do |file|
-  require file
-end
-
-Dir[File.expand_path('../galaxy_importers/*.rb', File.dirname(__FILE__))].each do |file|
-  require file
-end
-
-Dir[File.expand_path('../kings_importers/*.rb', File.dirname(__FILE__))].each do |file|
-  require file
-end
-
-Dir[File.expand_path('../chivas_importers/*.rb', File.dirname(__FILE__))].each do |file|
-  require file
-end
-
-Dir[File.expand_path('../ucla_importers/*.rb', File.dirname(__FILE__))].each do |file|
-  require file
-end
-
-Dir[File.expand_path('../usc_importers/*.rb', File.dirname(__FILE__))].each do |file|
-  require file
-end
-
-Dir[File.expand_path('../sparks_importers/*.rb', File.dirname(__FILE__))].each do |file|
-  require file
-end
-
-Dir[File.expand_path('../preps_importers/*.rb', File.dirname(__FILE__))].each do |file|
-  require file
+teams.each do |team|
+  Dir[File.expand_path("../#{team}_importers/*.rb", File.dirname(__FILE__))].each do |file|
+    require file
+  end
 end
 
 namespace :sync do
