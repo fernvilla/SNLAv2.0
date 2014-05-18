@@ -108,7 +108,7 @@ namespace :sync do
 
     TrojansOfficialSiteImporter.import
     TrojansFoxSportsImporter.import
-    BruinsLATimesImporter.import
+    TrojansLATimesImporter.import
 
     newly_added = Trojan.count - original_count
     puts "There are now #{Trojan.count} Trojans stories. #{newly_added} were just added."
