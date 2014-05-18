@@ -3,7 +3,7 @@ require 'feedjira'
 class TrojansLATimesImporter
   def self.import
     source = "LA Times"
-    feed = Feedjira::Feed.fetch_and_parse("http://www.latimes.com/sports/Trojans/rss2.0.xml")
+    feed = Feedjira::Feed.fetch_and_parse("http://www.latimes.com/sports/usc/rss2.0.xml")
     
     if defined? feed.entries
       feed.entries.each do |entry|
