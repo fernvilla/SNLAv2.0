@@ -119,6 +119,7 @@ namespace :sync do
     original_count = Galaxy.count
 
     GalaxyOfficialSiteImporter.import
+    GalaxyLATimesImporter.import
 
     newly_added = Galaxy.count - original_count
     puts "There are now #{Galaxy.count} Galaxy stories. #{newly_added} were just added."
@@ -129,6 +130,7 @@ namespace :sync do
     original_count = Chiva.count
 
     ChivasOfficialSiteImporter.import
+    ChivasLATimesImporter.import
 
     newly_added = Chiva.count - original_count
     puts "There are now #{Chiva.count} Chivas stories. #{newly_added} were just added."
