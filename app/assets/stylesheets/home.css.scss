@@ -268,6 +268,21 @@ a {
  }
 }
 
+footer {
+  color: #fff;
+  font-family: helvetica;
+  bottom: 0;
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 35px;
+  font-size: 10px;
+  height: 100%;
+  @include linear-gradient(#09235e, $base-color); 
+  a {
+    color: #fff;
+  }
+}
+
 @media (max-width: 400px) {
   .instagram {
     margin: 0 auto;
