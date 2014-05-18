@@ -48,6 +48,7 @@ namespace :sync do
     original_count = Dodger.count
 
     DodgersOfficialSiteImporter.import
+    DodgersFoxSportsImporter.import
 
     newly_added = Dodger.count - original_count
     puts "There are now #{Dodger.count} Dodgers stories. #{newly_added} were just added."
@@ -58,6 +59,7 @@ namespace :sync do
     original_count = Angel.count
 
     AngelsOfficialSiteImporter.import
+    AngelsFoxSportsImporter.import
 
     newly_added = Angel.count - original_count
     puts "There are now #{Angel.count} Angels stories. #{newly_added} were just added."
@@ -68,6 +70,7 @@ namespace :sync do
     original_count = Duck.count
 
     DucksOfficialSiteImporter.import
+    DucksFoxSportsImporter.import
 
     newly_added = Duck.count - original_count
     puts "There are now #{Duck.count} Ducks stories. #{newly_added} were just added."
@@ -78,6 +81,7 @@ namespace :sync do
     original_count = King.count
 
     KingsOfficialSiteImporter.import
+    KingsFoxSportsImporter.import
 
     newly_added = King.count - original_count
     puts "There are now #{King.count} Kings stories. #{newly_added} were just added."
@@ -88,6 +92,7 @@ namespace :sync do
     original_count = Bruin.count
 
     BruinsOfficialSiteImporter.import
+    BruinsFoxSportsImporter.import
 
     newly_added = Bruin.count - original_count
     puts "There are now #{Bruin.count} Bruins stories. #{newly_added} were just added."
@@ -98,6 +103,7 @@ namespace :sync do
     original_count = Trojan.count
 
     TrojansOfficialSiteImporter.import
+    TrojansFoxSportsImporter.import
 
     newly_added = Trojan.count - original_count
     puts "There are now #{Trojan.count} Trojans stories. #{newly_added} were just added."
@@ -128,6 +134,7 @@ namespace :sync do
     original_count = Spark.count
 
     SparksESPNSiteImporter.import
+    SparksFoxSportsImporter.import
 
     newly_added = Spark.count - original_count
     puts "There are now #{Spark.count} Sparks stories. #{newly_added} were just added."
