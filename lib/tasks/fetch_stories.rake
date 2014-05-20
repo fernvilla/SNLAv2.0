@@ -50,6 +50,7 @@ namespace :sync do
     DodgersOfficialSiteImporter.import
     DodgersFoxSportsImporter.import
     DodgersLATimesImporter.import
+    DodgersCBSImporter.import
 
     newly_added = Dodger.count - original_count
     puts "There are now #{Dodger.count} Dodgers stories. #{newly_added} were just added."
@@ -62,6 +63,7 @@ namespace :sync do
     AngelsOfficialSiteImporter.import
     AngelsFoxSportsImporter.import
     AngelsLATimesImporter.import
+    AngelsCBSImporter.import
 
     newly_added = Angel.count - original_count
     puts "There are now #{Angel.count} Angels stories. #{newly_added} were just added."
@@ -73,6 +75,7 @@ namespace :sync do
 
     DucksOfficialSiteImporter.import
     DucksFoxSportsImporter.import
+    DucksCBSImporter.import
 
     newly_added = Duck.count - original_count
     puts "There are now #{Duck.count} Ducks stories. #{newly_added} were just added."
@@ -85,6 +88,7 @@ namespace :sync do
     KingsOfficialSiteImporter.import
     KingsFoxSportsImporter.import
     KingsLATimesImporter.import
+    KingsCBSImporter.import
 
     newly_added = King.count - original_count
     puts "There are now #{King.count} Kings stories. #{newly_added} were just added."
@@ -153,6 +157,7 @@ namespace :sync do
 
     PrepsOCRegisterSiteImporter.import
     PrepsLATimesImporter.import
+    PrepsCBSImporter.import
 
     newly_added = Prep.count - original_count
     puts "There are now #{Prep.count} Preps stories. #{newly_added} were just added."
