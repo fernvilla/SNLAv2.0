@@ -7,7 +7,7 @@ class DucksLATimesImporter
     
     if defined? feed.entries
       feed.entries.each do |entry|
-        Duck.where(url: entry.url).first_or_create(
+        Duck.where(title: entry.title).first_or_create(
           title:      entry.title,
           author:     entry.author,
           summary:    entry.summary,
@@ -16,8 +16,8 @@ class DucksLATimesImporter
           source:     source,
         )
         if defined? entry.image && !entry.image 
-          url = Duck.where(url: entry.url).first
-          url.update(image: entry.image)
+          title = Duck.where(title: entry.title).first
+          title.update(image: entry.image)
         end
       end
     end

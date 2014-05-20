@@ -84,7 +84,6 @@ body {
   width: 90%;
   height: auto;
   box-shadow: 3px 3px 3px #000;
-  /*border: 2px solid $base-color;*/
 }
 
 .headlines {
@@ -269,7 +268,7 @@ a {
 }
 
 footer {
-  color: #fff;
+  color: #000;
   font-family: helvetica;
   bottom: 0;
   text-align: center;
@@ -277,7 +276,7 @@ footer {
   margin-top: 35px;
   font-size: 10px;
   height: 100%;
-  @include linear-gradient(#09235e, $base-color); 
+  background: #dfdfdf; 
   a {
     color: #fff;
   }

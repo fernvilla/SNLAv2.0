@@ -7,7 +7,7 @@ class KingsLATimesImporter
     
     if defined? feed.entries
       feed.entries.each do |entry|
-        King.where(url: entry.url).first_or_create(
+        King.where(title: entry.title).first_or_create(
           title:      entry.title,
           author:     entry.author,
           summary:    entry.summary,
@@ -16,8 +16,8 @@ class KingsLATimesImporter
           source:     source,
         )
         if defined? entry.image && !entry.image 
-          url = King.where(url: entry.url).first
-          url.update(image: entry.image)
+          title = King.where(title: entry.title).first
+          title.update(image: entry.image)
         end
       end
     end

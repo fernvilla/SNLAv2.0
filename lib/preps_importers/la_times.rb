@@ -11,7 +11,7 @@ class PrepsLATimesImporter
     feeds.each do |feed|
       if defined? feed.entries
         feed.entries.each do |entry|
-          Prep.where(url: entry.url).first_or_create(
+          Prep.where(title: entry.title).first_or_create(
             title:      entry.title,
             author:     entry.author,
             summary:    entry.summary,
@@ -20,8 +20,8 @@ class PrepsLATimesImporter
             source:     source,
           )
           if defined? entry.image && !entry.image 
-            url = Prep.where(url: entry.url).first
-            url.update(image: entry.image)
+            title = Prep.where(title: entry.title).first
+            title.update(image: entry.image)
           end
         end
       end

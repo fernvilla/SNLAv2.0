@@ -11,7 +11,7 @@ class LakersLATimesImporter
     feeds.each do |feed|
       if defined? feed.entries
         feed.entries.each do |entry|
-          Laker.where(url: entry.url).first_or_create(
+          Laker.where(title: entry.title).first_or_create(
             title:      entry.title,
             author:     entry.author,
             summary:    entry.summary,
@@ -20,8 +20,8 @@ class LakersLATimesImporter
             source:     source,
           )
           if defined? entry.image && !entry.image 
-            url = Laker.where(url: entry.url).first
-            url.update(image: entry.image)
+            title = Laker.where(title: entry.title).first
+            title.update(image: entry.image)
           end
         end
       end

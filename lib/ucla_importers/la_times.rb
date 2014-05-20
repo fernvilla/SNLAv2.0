@@ -7,7 +7,7 @@ class BruinsLATimesImporter
     
     if defined? feed.entries
       feed.entries.each do |entry|
-        Bruin.where(url: entry.url).first_or_create(
+        Bruin.where(title: entry.title).first_or_create(
           title:      entry.title,
           author:     entry.author,
           summary:    entry.summary,
@@ -16,8 +16,8 @@ class BruinsLATimesImporter
           source:     source,
         )
         if defined? entry.image && !entry.image 
-          url = Bruin.where(url: entry.url).first
-          url.update(image: entry.image)
+          title = Bruin.where(title: entry.title).first
+          title.update(image: entry.image)
         end
       end
     end
