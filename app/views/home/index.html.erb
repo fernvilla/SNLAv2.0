@@ -9,9 +9,7 @@
         <p>Team Social Media Feeds (Instagram, Twitter, Tumblr, YouTube) Also Included.</p>
         <p>Log In and Bookmark Stories for Later Reading.</p>
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-6">
-        <%= image_tag("home.png", :class => "home-image") %>
-      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6"><%= image_tag("home.png", :class => "home-image") %></div>
     </div>
   </div>
 </div>
@@ -25,8 +23,7 @@
 <div class="container-fluid">
   <div class="row home">
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header">Lakers</div>
-      <!-- TODO: Refactor this! -->
+      <div class="team-header"><%= link_to "Lakers", lakers_path %></div>
       <% @lakers.each do |story| %>
         <div class="story">
 
@@ -43,8 +40,7 @@
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header">Clippers</div>
-      <!-- TODO: Refactor this! -->
+      <div class="team-header"><%= link_to "Clippers", clippers_path %></div>
       <% @clippers.each do |story| %>
         <div class="story">
 
@@ -61,8 +57,7 @@
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header">Dodgers</div>
-      <!-- TODO: Refactor this! -->
+      <div class="team-header"><%= link_to "Dodgers", dodgers_path %></div>
       <% @dodgers.each do |story| %>
         <div class="story">
 
@@ -76,12 +71,10 @@
 
         </div>
       <% end %>
-      
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header">Angels</div>
-      <!-- TODO: Refactor this! -->
+      <div class="team-header"><%= link_to "Angels", angels_path %></div>
       <% @angels.each do |story| %>
         <div class="story">
 
@@ -100,8 +93,7 @@
 
   <div class="row home">
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header">UCLA Bruins</div>
-      <!-- TODO: Refactor this! -->
+      <div class="team-header"><%= link_to "UCLA Bruins", bruins_path %></div>
       <% @bruins.each do |story| %>
         <div class="story">
 
@@ -118,8 +110,7 @@
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header">USC Trojans</div>
-      <!-- TODO: Refactor this! -->
+      <div class="team-header"><%= link_to "USC", trojans_path %></div>
       <% @trojans.each do |story| %>
         <div class="story">
 
@@ -136,8 +127,7 @@
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header">Kings</div>
-      <!-- TODO: Refactor this! -->
+      <div class="team-header"><%= link_to "Kings", kings_path %></div>
       <% @kings.each do |story| %>
         <div class="story">
 
@@ -154,8 +144,7 @@
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header">Ducks</div>
-      <!-- TODO: Refactor this! -->
+      <div class="team-header"><%= link_to "Ducks", ducks_path %></div>
       <% @ducks.each do |story| %>
         <div class="story">
 
@@ -174,8 +163,7 @@
 
   <div class="row home">
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header">Galaxy</div>
-      <!-- TODO: Refactor this! -->
+      <div class="team-header"><%= link_to "Galaxy", galaxy_path %></div>
       <% @galaxy.each do |story| %>
         <div class="story">
 
@@ -192,8 +180,7 @@
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header">Chivas USA</div>
-      <!-- TODO: Refactor this! -->
+      <div class="team-header"><%= link_to "Chivas USA", chivas_path %></div>
       <% @chivas.each do |story| %>
         <div class="story">
 
@@ -210,8 +197,7 @@
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header">Sparks</div>
-      <!-- TODO: Refactor this! -->
+      <div class="team-header"><%= link_to "Sparks", sparks_path %></div>
       <% @sparks.each do |story| %>
         <div class="story">
 
@@ -228,8 +214,7 @@
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header">High School</div>
-      <!-- TODO: Refactor this! -->
+      <div class="team-header"><%= link_to "High School", preps_path %></div>
       <% @preps.each do |story| %>
         <div class="story">
 

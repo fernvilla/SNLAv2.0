@@ -78,6 +78,7 @@ body {
   text-align: center;
   text-shadow: 3px 3px 5px #000;
   background-image: url('jumbo.jpg');
+  background-size: cover;
 }
 
 .home-image {
@@ -185,6 +186,12 @@ body {
   @include linear-gradient(#09235e, $base-color); 
   a {
     color: #fff;
+    &:visited {
+      color: #fff;
+    }
+    &:hover {
+      color: $secondary-color;
+    }
   }
 }
 
