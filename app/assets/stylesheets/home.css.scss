@@ -32,11 +32,13 @@ $font-size-base: 13px;
 body {
   font-family: 'Roboto Condensed', sans-serif;
   color: $base-color;
+  padding-top: 40px;
 }
 
 .navbar.navbar-inverse {
   margin: 0;
   @include linear-gradient(#09235e, $base-color);
+  border: none;
 }
 
 .navbar .nav > li:hover {
@@ -49,7 +51,7 @@ body {
 
 #sub-bar {
   background-color: $secondary-color;
-  height: 6px;
+  height: 4px;
 }
 
 #title {
@@ -82,7 +84,7 @@ body {
 }
 
 .home-image {
-  width: 90%;
+  width: 95%;
   height: auto;
   box-shadow: 3px 3px 3px #000;
 }
@@ -275,7 +277,7 @@ a {
 }
 
 footer {
-  color: #000;
+  color: #fff;
   font-family: helvetica;
   bottom: 0;
   text-align: center;
@@ -283,7 +285,7 @@ footer {
   margin-top: 35px;
   font-size: 10px;
   height: 100%;
-  background: #dfdfdf; 
+  background: #000; 
   a {
     color: #fff;
   }

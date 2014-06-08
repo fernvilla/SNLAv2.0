@@ -26,15 +26,13 @@
       <div class="team-header"><%= link_to "Lakers", lakers_path %></div>
       <% @lakers.each do |story| %>
         <div class="story">
-
-          <!-- Image, if available -->
           <% if story.image %>
             <img src="<%= story.image %>" alt="" class="story-image">
           <% end %>
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-
+          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
         </div>
       <% end %>
     </div>
@@ -43,15 +41,13 @@
       <div class="team-header"><%= link_to "Clippers", clippers_path %></div>
       <% @clippers.each do |story| %>
         <div class="story">
-
-          <!-- Image, if available -->
           <% if story.image %>
             <img src="<%= story.image %>" alt="" class="story-image">
           <% end %>
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-
+          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
         </div>
       <% end %>
     </div>
@@ -60,15 +56,13 @@
       <div class="team-header"><%= link_to "Dodgers", dodgers_path %></div>
       <% @dodgers.each do |story| %>
         <div class="story">
-
-          <!-- Image, if available -->
           <% if story.image %>
             <img src="<%= story.image %>" alt="" class="story-image">
           <% end %>
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-
+          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
         </div>
       <% end %>
     </div>
@@ -77,15 +71,13 @@
       <div class="team-header"><%= link_to "Angels", angels_path %></div>
       <% @angels.each do |story| %>
         <div class="story">
-
-          <!-- Image, if available -->
           <% if story.image %>
             <img src="<%= story.image %>" alt="" class="story-image">
           <% end %>
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-
+          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
         </div>
       <% end %>
     </div>
@@ -96,15 +88,13 @@
       <div class="team-header"><%= link_to "UCLA Bruins", bruins_path %></div>
       <% @bruins.each do |story| %>
         <div class="story">
-
-          <!-- Image, if available -->
           <% if story.image %>
             <img src="<%= story.image %>" alt="" class="story-image">
           <% end %>
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-
+          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
         </div>
       <% end %>
     </div>
@@ -113,15 +103,13 @@
       <div class="team-header"><%= link_to "USC", trojans_path %></div>
       <% @trojans.each do |story| %>
         <div class="story">
-
-          <!-- Image, if available -->
           <% if story.image %>
             <img src="<%= story.image %>" alt="" class="story-image">
           <% end %>
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-
+          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
         </div>
       <% end %>
     </div>
@@ -130,15 +118,13 @@
       <div class="team-header"><%= link_to "Kings", kings_path %></div>
       <% @kings.each do |story| %>
         <div class="story">
-
-          <!-- Image, if available -->
           <% if story.image %>
             <img src="<%= story.image %>" alt="" class="story-image">
           <% end %>
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-
+          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
         </div>
       <% end %>
     </div>
@@ -147,15 +133,13 @@
       <div class="team-header"><%= link_to "Ducks", ducks_path %></div>
       <% @ducks.each do |story| %>
         <div class="story">
-
-          <!-- Image, if available -->
           <% if story.image %>
             <img src="<%= story.image %>" alt="" class="story-image">
           <% end %>
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-
+          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
         </div>
       <% end %>
     </div>
@@ -166,15 +150,13 @@
       <div class="team-header"><%= link_to "Galaxy", galaxy_path %></div>
       <% @galaxy.each do |story| %>
         <div class="story">
-
-          <!-- Image, if available -->
           <% if story.image %>
             <img src="<%= story.image %>" alt="" class="story-image">
           <% end %>
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-
+          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
         </div>
       <% end %>
     </div>
@@ -183,15 +165,13 @@
       <div class="team-header"><%= link_to "Chivas USA", chivas_path %></div>
       <% @chivas.each do |story| %>
         <div class="story">
-
-          <!-- Image, if available -->
           <% if story.image %>
             <img src="<%= story.image %>" alt="" class="story-image">
           <% end %>
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-
+          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
         </div>
       <% end %>
     </div>
@@ -200,15 +180,13 @@
       <div class="team-header"><%= link_to "Sparks", sparks_path %></div>
       <% @sparks.each do |story| %>
         <div class="story">
-
-          <!-- Image, if available -->
           <% if story.image %>
             <img src="<%= story.image %>" alt="" class="story-image">
           <% end %>
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-
+          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
         </div>
       <% end %>
     </div>
@@ -217,15 +195,13 @@
       <div class="team-header"><%= link_to "High School", preps_path %></div>
       <% @preps.each do |story| %>
         <div class="story">
-
-          <!-- Image, if available -->
           <% if story.image %>
             <img src="<%= story.image %>" alt="" class="story-image">
           <% end %>
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-
+          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
         </div>
       <% end %>
     </div>

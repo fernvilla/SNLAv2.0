@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   get "chivas" => "chivas#index"
   get "preps" => "preps#index"
 
+  resources :bookmarks
 end
