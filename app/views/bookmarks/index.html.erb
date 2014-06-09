@@ -8,7 +8,7 @@
     <% current_user.bookmarks.each do |bookmark| %>
       <p>
         <a href="<%= bookmark.url %>" target="_blank"><%= bookmark.title %></a> 
-        <%= link_to 'Delete', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to '', bookmark, :class => "fa fa-trash-o", method: :delete, data: { confirm: 'Are you sure?' } %>
       </p>
     <% end %>
   </div>
