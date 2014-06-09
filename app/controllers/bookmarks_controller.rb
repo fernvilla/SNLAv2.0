@@ -14,12 +14,17 @@ class BookmarksController < ApplicationController
   end
 
   def create
-    @bookmark = Bookmark.new(bookmark_params)
-    @bookmark.user = current_user
+    if current_user 
+      @bookmark = Bookmark.new(bookmark_params)
+      @bookmark.user = current_user
 
-    if @bookmark.save
-      flash[:notice] = "Link has been bookmarked successfully"
-      redirect_to bookmarks_path
+      if @bookmark.save
+        flash[:notice] = "Link has been bookmarked successfully"
+        redirect_to bookmarks_path
+      end
+    else
+      redirect_to new_user_session_path
+      flash[:alert] = "Please sign in first"
     end
   end
 
