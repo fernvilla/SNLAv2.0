@@ -1,2 +1,15 @@
-<h1>Bookmarks#index</h1>
-<p>Find me in app/views/bookmarks/index.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="notice"><%= notice %></div>
+    <div class="alert"><%= alert %></div>
+  </div>
+
+  <div class="row">
+    <% current_user.bookmarks.each do |bookmark| %>
+      <p>
+        <a href="<%= bookmark.url %>" target="_blank"><%= bookmark.title %></a> 
+        <%= link_to 'Delete', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </p>
+    <% end %>
+  </div>
+</div>

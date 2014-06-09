@@ -32,7 +32,18 @@
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
+          &nbsp;
+          <%= link_to '', { :controller => "bookmarks", 
+                      :action => "create", 
+                      :title => story.title,
+                      :published => story.published,
+                      :source => story.source, 
+                      :url => story.url, 
+                      :team => "Lakers", 
+                      :date_bookmarked => Time.now }, 
+                      :method => "post",
+                      :class => "fa fa-bookmark-o",
+                      :title => "Bookmark story" %>
         </div>
       <% end %>
     </div>
@@ -47,7 +58,18 @@
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
+          &nbsp;
+          <%= link_to '', { :controller => "bookmarks", 
+                      :action => "create", 
+                      :title => story.title,
+                      :published => story.published,
+                      :source => story.source, 
+                      :url => story.url, 
+                      :team => "Clippers", 
+                      :date_bookmarked => Time.now }, 
+                      :method => "post",
+                      :class => "fa fa-bookmark-o",
+                      :title => "Bookmark story" %>
         </div>
       <% end %>
     </div>
@@ -62,7 +84,18 @@
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
+          &nbsp;
+          <%= link_to '', { :controller => "bookmarks", 
+                      :action => "create", 
+                      :title => story.title,
+                      :published => story.published,
+                      :source => story.source, 
+                      :url => story.url, 
+                      :team => "Dodgers", 
+                      :date_bookmarked => Time.now }, 
+                      :method => "post",
+                      :class => "fa fa-bookmark-o",
+                      :title => "Bookmark story" %>
         </div>
       <% end %>
     </div>
@@ -77,7 +110,18 @@
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
+          &nbsp;
+          <%= link_to '', { :controller => "bookmarks", 
+                      :action => "create", 
+                      :title => story.title,
+                      :published => story.published,
+                      :source => story.source, 
+                      :url => story.url, 
+                      :team => "Angels", 
+                      :date_bookmarked => Time.now }, 
+                      :method => "post",
+                      :class => "fa fa-bookmark-o",
+                      :title => "Bookmark story" %>
         </div>
       <% end %>
     </div>
@@ -94,7 +138,18 @@
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
+          &nbsp;
+          <%= link_to '', { :controller => "bookmarks", 
+                      :action => "create", 
+                      :title => story.title,
+                      :published => story.published,
+                      :source => story.source, 
+                      :url => story.url, 
+                      :team => "Bruins", 
+                      :date_bookmarked => Time.now }, 
+                      :method => "post",
+                      :class => "fa fa-bookmark-o",
+                      :title => "Bookmark story" %>
         </div>
       <% end %>
     </div>
@@ -109,7 +164,18 @@
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
+          &nbsp;
+          <%= link_to '', { :controller => "bookmarks", 
+                      :action => "create", 
+                      :title => story.title,
+                      :published => story.published,
+                      :source => story.source, 
+                      :url => story.url, 
+                      :team => "Trojans", 
+                      :date_bookmarked => Time.now }, 
+                      :method => "post",
+                      :class => "fa fa-bookmark-o",
+                      :title => "Bookmark story" %>
         </div>
       <% end %>
     </div>
@@ -124,7 +190,18 @@
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
+          &nbsp;
+          <%= link_to '', { :controller => "bookmarks", 
+                      :action => "create", 
+                      :title => story.title,
+                      :published => story.published,
+                      :source => story.source, 
+                      :url => story.url, 
+                      :team => "Kings", 
+                      :date_bookmarked => Time.now }, 
+                      :method => "post",
+                      :class => "fa fa-bookmark-o",
+                      :title => "Bookmark story" %>
         </div>
       <% end %>
     </div>
@@ -139,7 +216,18 @@
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
+          &nbsp;
+          <%= link_to '', { :controller => "bookmarks", 
+                      :action => "create", 
+                      :title => story.title,
+                      :published => story.published,
+                      :source => story.source, 
+                      :url => story.url, 
+                      :team => "Ducks", 
+                      :date_bookmarked => Time.now }, 
+                      :method => "post",
+                      :class => "fa fa-bookmark-o",
+                      :title => "Bookmark story" %>
         </div>
       <% end %>
     </div>
@@ -156,7 +244,18 @@
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
+          &nbsp;  
+          <%= link_to '', { :controller => "bookmarks", 
+                      :action => "create", 
+                      :title => story.title,
+                      :published => story.published,
+                      :source => story.source, 
+                      :url => story.url, 
+                      :team => "Galaxy", 
+                      :date_bookmarked => Time.now }, 
+                      :method => "post",
+                      :class => "fa fa-bookmark-o",
+                      :title => "Bookmark story" %>
         </div>
       <% end %>
     </div>
@@ -171,7 +270,18 @@
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
+          &nbsp;
+          <%= link_to '', { :controller => "bookmarks", 
+                      :action => "create", 
+                      :title => story.title,
+                      :published => story.published,
+                      :source => story.source, 
+                      :url => story.url, 
+                      :team => "Chivas", 
+                      :date_bookmarked => Time.now }, 
+                      :method => "post",
+                      :class => "fa fa-bookmark-o",
+                      :title => "Bookmark story" %>
         </div>
       <% end %>
     </div>
@@ -186,7 +296,18 @@
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
+          &nbsp;
+          <%= link_to '', { :controller => "bookmarks", 
+                      :action => "create", 
+                      :title => story.title,
+                      :published => story.published,
+                      :source => story.source, 
+                      :url => story.url, 
+                      :team => "Sparks", 
+                      :date_bookmarked => Time.now }, 
+                      :method => "post",
+                      :class => "fa fa-bookmark-o",
+                      :title => "Bookmark story" %>
         </div>
       <% end %>
     </div>
@@ -201,7 +322,18 @@
 
           <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
           <span class="timestamp"> (<%= story.published.to_s(:created_date) %>, Source: <%= story.source %>) </span>
-          &nbsp;<i class="fa fa-bookmark-o" title="Bookmark Story"></i>
+          &nbsp;
+          <%= link_to '', { :controller => "bookmarks", 
+                      :action => "create", 
+                      :title => story.title,
+                      :published => story.published,
+                      :source => story.source, 
+                      :url => story.url, 
+                      :team => "High Schools", 
+                      :date_bookmarked => Time.now }, 
+                      :method => "post",
+                      :class => "fa fa-bookmark-o",
+                      :title => "Bookmark story" %>
         </div>
       <% end %>
     </div>
