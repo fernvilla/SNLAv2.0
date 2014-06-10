@@ -21,7 +21,7 @@
         <% @twitter.each do |tweet| %>
           <p>
             <a href="http://www.twitter.com/<%= tweet.user.screen_name %>/status/<%= tweet.id %>" target="_blank"><%= tweet.text %></a>  
-            <span class="timestamp">(<%= tweet.created_at.to_s(:created_date)  %>)</span>
+            <span class="timestamp">(<%= tweet.created_at.strftime('%m/%d/%Y, %l:%M%p') %>)</span>
           </p>
         <% end %>
       </div>
@@ -32,7 +32,7 @@
           <p>
             <%= tweet.user.screen_name.capitalize %>: 
             <a href="http://www.twitter.com/<%= tweet.user.screen_name %>/status/<%= tweet.id %>" target="_blank"><%= tweet.text %></a>  
-            <span class="timestamp">(<%= tweet.created_at.to_s(:created_date)  %>)</span>
+            <span class="timestamp">(<%= tweet.created_at.strftime('%m/%d/%Y, %l:%M%p') %>)</span>
           </p>
         <% end %>
       </div>
@@ -54,7 +54,7 @@
               <% end %>
 
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
-              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
+              <span class="timestamp"> (<%= story.published.strftime('%m/%d/%Y, %l:%M%p')%>) </span>
 
               <!-- Check if new -->
               <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
@@ -74,7 +74,7 @@
                 <img src="<%= story.image %>" alt="" class="story-image">
               <% end %>
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
-              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
+              <span class="timestamp"> (<%= story.published.strftime('%m/%d/%Y, %l:%M%p')%>) </span>
               <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
                 <span class="new"> <%= "New!" %> </span>
               <% end %>
@@ -91,7 +91,7 @@
                 <img src="<%= story.image %>" alt="" class="story-image">
               <% end %>
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a>
-              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
+              <span class="timestamp"> (<%= story.published.strftime('%m/%d/%Y, %l:%M%p')%>) </span>
               <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
                 <span class="new"> <%= "New!" %> </span>
               <% end %>
@@ -111,7 +111,7 @@
                 <img src="<%= story.image %>" alt="" class="story-image">
               <% end %>
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a>
-              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
+              <span class="timestamp"> (<%= story.published.strftime('%m/%d/%Y, %l:%M%p')%>) </span>
               <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
                 <span class="new"> <%= "New!" %> </span>
               <% end %>
@@ -128,7 +128,7 @@
                 <img src="<%= story.image %>" alt="" class="story-image">
               <% end %>
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
-              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
+              <span class="timestamp"> (<%= story.published.strftime('%m/%d/%Y, %l:%M%p')%>) </span>
               <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
                 <span class="new"> <%= "New!" %> </span>
               <% end %>
@@ -145,7 +145,7 @@
                 <img src="<%= story.image %>" alt="" class="story-image">
               <% end %>
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
-              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
+              <span class="timestamp"> (<%= story.published.strftime('%m/%d/%Y, %l:%M%p')%>) </span>
               <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
                 <span class="new"> <%= "New!" %> </span>
               <% end %>
@@ -181,7 +181,7 @@
                 <img src="<%= story.image %>" alt="" class="story-image">
               <% end %>
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a>
-              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
+              <span class="timestamp"> (<%= story.published.strftime('%m/%d/%Y, %l:%M%p')%>) </span>
               <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
                 <span class="new"> <%= "New!" %> </span>
               <% end %>
@@ -196,7 +196,7 @@
             <div class="story">
              
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a> 
-              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
+              <span class="timestamp"> (<%= story.published.strftime('%m/%d/%Y, %l:%M%p')%>) </span>
               <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
                 <span class="new"> <%= "New!" %> </span>
               <% end %>
@@ -213,7 +213,7 @@
                 <img src="<%= story.image %>" alt="" class="story-image">
               <% end %>
               <a href="<%= story.url %>" target="_blank"> <%= story.title %> </a>
-              <span class="timestamp"> (<%= story.published.to_s(:created_date) %>) </span>
+              <span class="timestamp"> (<%= story.published.strftime('%m/%d/%Y, %l:%M%p')%>) </span>
               <% if story.published.strftime("%-m/%-d") == Date.today.strftime("%-m/%-d") %> 
                 <span class="new"> <%= "New!" %> </span>
               <% end %>
