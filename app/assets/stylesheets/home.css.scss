@@ -37,7 +37,7 @@ body {
 
 .navbar.navbar-inverse {
   margin: 0;
-  @include linear-gradient(#09235e, $base-color);
+  // @include linear-gradient(#09235e, $base-color);
   border: none;
 }
 
@@ -229,6 +229,7 @@ body {
   border-bottom: 1px solid #e6e6e6;
   min-height: 50px;
   padding: 2px 5px;
+
   &:hover {
     background-color:#efefef;
     border-radius: 5px;
@@ -240,6 +241,7 @@ body {
   height: 40px; 
   width: 50px; 
   margin: 2px 10px 2px 0;
+
   img {
     box-shadow: 1px 1px 1px #000;
   }
@@ -253,6 +255,7 @@ body {
 
 a {
   color: #004080;
+
   &:hover {
     color: #306180;
     text-decoration: none;
@@ -286,7 +289,8 @@ footer {
   font-size: 10px;
   height: 100%;
   background: #000; 
-  a {
+
+  a{
     color: #fff;
   }
 }
